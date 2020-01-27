@@ -74,6 +74,7 @@ h1, h2, h3 {
 }
 
 #profile-picture {
+  width: 200px;
   border-radius: 50%;
   padding-right: 20px;
 }
