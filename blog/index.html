@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
   <!-- https://github.com/showdownjs/showdown -->
   <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-  <div id="post"></div>
-  <script src="mdloader.js"></script>
+  <aside>
+    <div id="aside-fixed">
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="cv">Curriculum Vitae</a></li>
+          <li><a href="blog">Software</a></li>
+          <li><a href="blog">Blog</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+  <article>
+    <div id="post"></div>
+    <script src="mdloader.js"></script>
+  </article>
 </body>
 </html>
