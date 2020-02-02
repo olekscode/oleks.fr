@@ -24,13 +24,18 @@ function convertMarkdownToHtml(markdownText) {
 
 function loadMarkdown(url, divId) {
   var text = getContentsOfFileFromURL(url);
-  var html = convertMarkdownToHtml(text);
+  var html = '<div id="post">' + convertMarkdownToHtml(text) + '</div>';
   document.getElementById(divId).innerHTML = html;
+}
+
+function onContentReloaded() {
+  Prism.highlightAll();
 }
 
 function openPost(postId) {
   url = `https://raw.githubusercontent.com/olekscode/Blog/master/posts/${postId}.md`;
   loadMarkdown(url, "container");
+  onContentReloaded();
 }
 
 function openListOfPosts() {
@@ -41,13 +46,26 @@ function openListOfPosts() {
   listItems = ""
 
   for (const [key, value] of Object.entries(json)) {
-    listItems += `<li><a href="pleaseEnableJavaScript.html" onClick="openPost('${key}'); return false">${value}</a></li>`;
+    listItems += `<li><a href="pleaseEnableJavaScript.html" onClick="window.open('?post=${key}', '_self'); return false;">${value}</a></li>`;
   }
 
-  html += `\n<ul>${listItems}</ul>`
+  html += `\n<ul id="list-of-posts">${listItems}</ul>`
   document.getElementById('container').innerHTML = html;
   return false;
 }
 
+function routeBasedOnSearchParameter() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  postId = urlParams.get('post');
+
+  if (postId) {
+    openPost(postId);
+  }
+  else {
+    openListOfPosts();
+  }
+}
+
 $('#allPostsButton').click(openListOfPosts);
-openListOfPosts();
+routeBasedOnSearchParameter();
