@@ -1,6 +1,6 @@
 "use strict";
 
-import {urls} from './constants.js';
+import urls from './constants.js';
 
 function getContentsOfFileFromURL(url) {
   var result = null;
@@ -88,13 +88,6 @@ function openListOfPosts(posts) {
   openInMainArea(html);
 }
 
-function onClickOpen(id, url) {
-  // For links in header
-  $(id).click(function() {
-    window.open(url, '_self');
-    return false; });
-}
-
 function routeBasedOnSearchParameter() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -110,11 +103,5 @@ function routeBasedOnSearchParameter() {
     openListOfPosts(posts);
   }
 }
-
-const blogHome = window.location.href.split('?')[0];
-
-onClickOpen('#nav-all', blogHome);
-onClickOpen('#nav-categories', blogHome);
-onClickOpen('#nav-about', urls.homepage);
 
 routeBasedOnSearchParameter();

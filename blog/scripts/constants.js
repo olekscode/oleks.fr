@@ -3,6 +3,5 @@ const metadataFolder = blogRawUrl + '/metadata';
 
 export const urls = Object.freeze({
   postsFolder: blogRawUrl + '/posts',
-  postsMetadataFile: metadataFolder + '/posts.json',
-  homepage: 'http://www.oleks.fr',
+  postsMetadataFile: metadataFolder + '/posts.json'
 });
