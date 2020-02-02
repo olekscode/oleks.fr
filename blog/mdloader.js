@@ -51,7 +51,13 @@ function openListOfPosts() {
 
   html += `\n<ul id="list-of-posts">${listItems}</ul>`
   document.getElementById('container').innerHTML = html;
-  return false;
+}
+
+function onClickOpen(id, url) {
+  // For links in header
+  $(id).click(function() {
+    window.open(url, '_self');
+    return false});
 }
 
 function routeBasedOnSearchParameter() {
@@ -67,5 +73,11 @@ function routeBasedOnSearchParameter() {
   }
 }
 
-$('#allPostsButton').click(openListOfPosts);
+const home = window.location.href.split('?')[0]
+
+onClickOpen('#nav-all', home);
+onClickOpen('#nav-ml', '?category=machine-learning');
+onClickOpen('#nav-pharo', '?category=pharo');
+onClickOpen('#nav-about', 'http://www.oleks.fr');
+
 routeBasedOnSearchParameter();

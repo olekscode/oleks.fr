@@ -1,15 +1,36 @@
 body {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
+  font-size: 17px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', sans-serif;
+header {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid lightgray;
+}
+
+header li {
+  display:inline;
+  padding: 15px;
+}
+
+header a {
+  color: gray;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: black;
 }
 
 article {
-  padding: 50px;
+  padding: 20px 0;
+}
+
+article h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #list-of-posts {
@@ -42,6 +63,8 @@ article {
   font-family: Open Sans,sans-serif;
   font-size: 17px;
   line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 #post a {
