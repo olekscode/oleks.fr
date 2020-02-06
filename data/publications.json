@@ -1,0 +1,46 @@
+{
+  "workshops": [
+    {
+      "authors": ["Julien Delplanque", "Stéphane Ducasse", "Oleksandr Zaitsev"],
+      "title": "Magic Literals in Pharo",
+      "workshop": "IWST19 - International Workshop on Smalltalk Technologies Cologne",
+      "month": "Aug",
+      "year": 2019,
+      "city": "Köln",
+      "country": "Germany",
+      "halId": "hal-02266137"
+    },
+    {
+      "authors": ["Oleksandr Zaytsev", "Nick Papoulias", "Serge Stinckwich"],
+      "title": "Towards Exploratory Data Analysis for Pharo"
+      "sth": "In Proceedings of the 12th edition of the International Workshop on Smalltalk Technologies (IWST ’17)",
+      "sthElse": "Association for Computing Machinery, New York, NY, USA, Article 12, 1–6.",
+      "year": 2017,
+      "DOI": "https://doi.org/10.1145/3139903.3139918"
+    }],
+  "chapters": [
+    {
+      "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse"],
+      "title": "A-Priori Algorithm for Mining Frequent Itemsets",
+      "bookTitle": "AI Book",
+      "chapterNumber": 3,
+      "publisher": "Square Brackets Associates",
+      "year": 2020
+    }],
+  "booklets": [
+    {
+      "authors": ["Oleksandr Zaitsev"],
+      "title": "Data Analysis Made Simple with Pharo DataFrame",
+      "publisher": "Square Brackets Associates",
+      "year": 2019
+    }],
+  "other": [
+    {
+      "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Nicolas Anquetil"],
+      "title": "Characterizing Pharo Code: A Technical Report",
+      "institution": "Inria Lille Nord Europe - Laboratoire CRIStAL - Université de Lille; Arolla",
+      "year": 2020,
+      "halId": "hal-02440055"
+    }
+  ]
+}
