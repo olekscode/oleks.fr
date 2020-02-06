@@ -12,7 +12,7 @@
     },
     {
       "authors": ["Oleksandr Zaytsev", "Nick Papoulias", "Serge Stinckwich"],
-      "title": "Towards Exploratory Data Analysis for Pharo"
+      "title": "Towards Exploratory Data Analysis for Pharo",
       "sth": "In Proceedings of the 12th edition of the International Workshop on Smalltalk Technologies (IWST ’17)",
       "sthElse": "Association for Computing Machinery, New York, NY, USA, Article 12, 1–6.",
       "year": 2017,
