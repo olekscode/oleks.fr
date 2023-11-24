@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Object-oriented programming",
+    "year": 2022,
+    "institution": "Centrale Lille",
+    "level": "Master 1",
+    "hours": {
+      "lecture": 0,
+      "supervised": 10,
+      "practical": 0
+    }
+  },
+  {
+    "title": "Programming in C",
+    "year": 2020,
+    "institution": "Polytech Lille",
+    "level": "Master 1",
+    "hours": {
+      "lecture": 6,
+      "supervised": 2,
+      "practical": 8
+    }
+  },
+  {
+    "title": "Programming in C",
+    "year": 2019,
+    "institution": "Polytech Lille",
+    "level": "Master 1",
+    "hours": {
+      "lecture": 0,
+      "supervised": 6,
+      "practical": 10
+    }
+  },
+  {
+    "title": "Research Seminar",
+    "year": 2019,
+    "institution": "Ukrainian Catholic University",
+    "level": "Master 2",
+    "hours": {
+      "lecture": 0,
+      "supervised": 7,
+      "practical": 0
+    }
+  },
+  {
+    "title": "Discrete Mathematics",
+    "year": 2018,
+    "institution": "Ukrainian Catholic University",
+    "level": "Bachelor 1",
+    "hours": {
+      "lecture": 0,
+      "supervised": 0,
+      "practical": 22
+    }
+  },
+  {
+    "title": "Discrete Mathematics",
+    "year": 2017,
+    "institution": "Ukrainian Catholic University",
+    "level": "Bachelor 1",
+    "hours": {
+      "lecture": 0,
+      "supervised": 0,
+      "practical": 26
+    }
+  }
+]

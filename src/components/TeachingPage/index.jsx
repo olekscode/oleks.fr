@@ -9,26 +9,27 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 import './style.css';
+import courses from '../../data/courses.json';
 
 
-function createData(period, title, level, institution, hours) {
-  return { period, title, level, institution, hours };
+function calculateEquivalentHours(lectureHours, supervisedHours, practicalHours) {
+  return Math.round(1.5 * lectureHours + supervisedHours + 2/3 * practicalHours);
 }
 
-const rows = [
-  createData('2022', 'Object-oriented programming', 'Master 1', 'Centrale Lille', '10h TD'),
-  createData('2020', 'Programming in C', 'Master 1', 'Polytech Lille', '6h CM, 2h TD, 8h TP'),
-  createData('2019', 'Programming in C', 'Master 1', 'Polytech Lille', '6h TD, 10h TP'),
-  createData('2019', 'Research Seminar', 'Master 2', 'Ukrainian Catholic University', '7h TD'),
-  createData('2018', 'Discrete Mathematics', 'Bachelor 1', 'Ukrainian Catholic University', '22h TP'),
-  createData('2017', 'Discrete Mathematics', 'Bachelor 1', 'Ukrainian Catholic University', '26h TP'),
-];
-
 export default function TeachingPage() {
+  const totalLectureHours = courses.reduce((sum, course) => sum + course.hours.lecture, 0);
+  const totalSupervisedHours = courses.reduce((sum, course) => sum + course.hours.supervised, 0);
+  const totalPracticalHours = courses.reduce((sum, course) => sum + course.hours.practical, 0);
+
+  const equivalentHours = calculateEquivalentHours(
+    totalLectureHours,
+    totalSupervisedHours,
+    totalPracticalHours);
+
   return (
     <div>
       <h1>Teaching Activities</h1>
-      <div><b>Total:</b> 6h lectures, 25h supervised work, 66h practical work (78h eq. lab hours)</div>
+      <div><b>Total:</b> {totalLectureHours}h lectures, {totalSupervisedHours}h supervised work, {totalPracticalHours}h practical work ({equivalentHours}h eq. lab hours)</div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -41,16 +42,21 @@ export default function TeachingPage() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {courses.map((course) => (
               <TableRow
-                key={row.name}
+                key={course.title + course.year}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell component="th" scope="row">{row.period}</TableCell>
-                <TableCell>{row.title}</TableCell>
-                <TableCell>{row.level}</TableCell>
-                <TableCell>{row.institution}</TableCell>
-                <TableCell>{row.hours}</TableCell>
+                <TableCell component="th" scope="row">{course.year}</TableCell>
+                <TableCell>{course.title}</TableCell>
+                <TableCell>{course.level}</TableCell>
+                <TableCell>{course.institution}</TableCell>
+                <TableCell>{
+                  calculateEquivalentHours(
+                    course.hours.lecture,
+                    course.hours.supervised,
+                    course.hours.practical)
+                }h</TableCell>
               </TableRow>
             ))}
           </TableBody>
