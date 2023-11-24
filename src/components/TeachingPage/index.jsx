@@ -24,7 +24,7 @@ export default function TeachingPage() {
   const equivalentHours = calculateEquivalentHours(
     totalLectureHours,
     totalSupervisedHours,
-    totalPracticalHours);
+    totalPracticalHours); 
 
   return (
     <div>
