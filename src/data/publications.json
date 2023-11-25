@@ -5,12 +5,33 @@
       {
         "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Nicolas Anquetil", "Arnaud Thiefaine"],
         "title": "How Libraries Evolve: A Survey of Two Industrial Companies and an Open-Source Community",
-        "conference": "29th Asia-Pacific Software Engineering Conference",
+        "conference": "29th Asia-Pacific Software Engineering Conference (APSEC)",
         "month": "December",
         "year": 2022,
         "country": "Japan",
         "halId": "hal-03853493",
         "doi": "10.1109/APSEC57359.2022.00043"
+      },
+      {
+        "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Nicolas Anquetil", "Arnaud Thiefaine"],
+        "title": "DepMiner: Automatic Recommendation of Transformation Rules for Method Deprecation",
+        "conference": "International Conference on Software and Systems Reuse (ICSR)",
+        "month": "June",
+        "year": 2022,
+        "city": "Montpellier",
+        "country": "France",
+        "halId": "hal-03647706",
+        "doi": "10.1007/978-3-031-08129-3_2"
+      },
+      {
+        "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Alexandre Bergel", "Mathieu Eveillard"],
+        "title": "Suggesting Descriptive Method Names: An Exploratory Study of Two Machine Learning Approaches",
+        "conference": "International Conference on the Quality of Information and Communications Technology (QUATIC)",
+        "month": "September",
+        "year": 2020,
+        "country": "(online)",
+        "halId": "hal-02962334",
+        "doi": "10.1007/978-3-030-58793-2_8"
       }
     ]
   },
@@ -18,10 +39,20 @@
     "groupName": "International Workshops",
     "publications": [
       {
+        "authors": ["Oleksandr Zaitsev", "Sebastian Jordan Montaño", "Stéphane Ducasse"],
+        "title": "How Fast is AI in Pharo? Benchmarking Linear Regression",
+        "workshop": "International Workshop on Smalltalk Technologies (IWST)",
+        "month": "August",
+        "year": 2022,
+        "city": "Novi Sad",
+        "country": "Serbia",
+        "halId": "hal-03768601"
+      },
+      {
         "authors": ["Julien Delplanque", "Stéphane Ducasse", "Oleksandr Zaitsev"],
         "title": "Magic Literals in Pharo",
-        "workshop": "IWST19 - International Workshop on Smalltalk Technologies Cologne",
-        "month": "Aug",
+        "workshop": "International Workshop on Smalltalk Technologies (IWST)",
+        "month": "August",
         "year": 2019,
         "city": "Köln",
         "country": "Germany",
@@ -30,10 +61,12 @@
       {
         "authors": ["Oleksandr Zaytsev", "Nick Papoulias", "Serge Stinckwich"],
         "title": "Towards Exploratory Data Analysis for Pharo",
-        "sth": "In Proceedings of the 12th edition of the International Workshop on Smalltalk Technologies (IWST ’17)",
-        "sthElse": "Association for Computing Machinery, New York, NY, USA, Article 12, 1–6.",
+        "workshop": "International Workshop on Smalltalk Technologies (IWST)",
+        "month": "September",
         "year": 2017,
-        "DOI": "https://doi.org/10.1145/3139903.3139918"
+        "city": "Maribor",
+        "country": "Slovenia",
+        "DOI": "10.1145/3139903.3139918"
       }
     ]
   },

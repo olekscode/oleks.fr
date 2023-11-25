@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/Inbox';
+import ArticleIcon from '@mui/icons-material/Article';
 
 import './style.css';
 import publicationGroups from '../../data/publications.json';
@@ -27,10 +27,10 @@ export default function PublicationsPage() {
             <nav aria-label="main mailbox folders">
               <List>
                 {group.publications.map((publication) => (
-                <ListItem disablePadding>
+                <ListItem disablePadding divider>
                   <ListItemButton>
                     <ListItemIcon>
-                      <InboxIcon />
+                      <ArticleIcon/>
                     </ListItemIcon>
                     <ListItemText primary={publicationString(publication)} />
                   </ListItemButton>
