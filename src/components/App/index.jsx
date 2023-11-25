@@ -6,7 +6,9 @@ import {
 } from 'react-router-dom';
 
 import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
 
+import Header from '../Header';
 import Navigation from '../Navigation';
 import ResearchPage from '../ResearchPage';
 import PublicationsPage from '../PublicationsPage';
@@ -22,8 +24,9 @@ import * as ROUTES from '../../constants/routes';
 const App = () => (
   <Router>
     <CssBaseline enableColorScheme />
-    <div>
-      <Navigation />
+    <Box>
+      <Header/>
+      <Navigation/>
       <Routes>
         <Route exact path={ROUTES.LANDING} element={ <ResearchPage/> } />
         <Route exact path={ROUTES.PUBLICATIONS} element={ <PublicationsPage/> } />
@@ -33,7 +36,7 @@ const App = () => (
         <Route exact path={ROUTES.BLOG} element={ <BlogPage/> } />
         <Route exact path={ROUTES.CV} element={ <CurriculumVitaePage/> } />
       </Routes>
-    </div>
+    </Box>
   </Router>
 );
 

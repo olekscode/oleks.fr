@@ -76,8 +76,8 @@ function socialIconButton(icon, url) {
 export default function Navigation() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" color="inherit" sx={{ boxShadow: 0, borderTop: 1, borderBottom: 1 }}>
+        <Toolbar variant="dense">
           <ButtonGroup variant="text" aria-label="text button group" sx={{ flexGrow: 1 }}>
             <Button component={Link} to={ROUTES.LANDING} color="inherit">Home</Button>
             <Button component={Link} to={ROUTES.PUBLICATIONS} color="inherit">Publications</Button>

@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
 import './style.css';
 import courses from '../../data/courses.json';
@@ -28,8 +29,8 @@ export default function TeachingPage() {
 
   return (
     <div>
-      <h1>Teaching Activities</h1>
-      <div><b>Total:</b> {totalLectureHours}h lectures, {totalSupervisedHours}h supervised work, {totalPracticalHours}h practical work ({equivalentHours}h eq. lab hours)</div>
+      <Typography variant="h4" gutterBottom>Teaching Activities</Typography>
+      <Typography variant="body1" gutterBottom><b>Total:</b> {totalLectureHours}h lectures, {totalSupervisedHours}h supervised work, {totalPracticalHours}h practical work ({equivalentHours}h eq. lab hours)</Typography>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
