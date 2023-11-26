@@ -57,8 +57,8 @@ export default function Navigation() {
   };
 
   return (
-    <AppBar position="static" color="primary" sx={{ boxShadow: 4 }}>
-      <Container maxWidth="xl">
+    <AppBar position="static" color="primary" sx={{ boxShadow: 4, mb: 3, mt: 1 }}>
+      <Container>
         <Toolbar disableGutters variant="dense">
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

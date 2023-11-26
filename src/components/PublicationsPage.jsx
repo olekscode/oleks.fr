@@ -27,8 +27,8 @@ export default function PublicationsPage() {
             <nav aria-label="main mailbox folders">
               <List>
                 {group.publications.map((publication) => (
-                <ListItem disablePadding divider>
-                  <ListItemButton>
+                <ListItem key={publication.id} disablePadding divider>
+                  <ListItemButton key={publication.id}>
                     <ListItemIcon>
                       <ArticleIcon/>
                     </ListItemIcon>

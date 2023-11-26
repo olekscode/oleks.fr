@@ -3,6 +3,7 @@
     "groupName": "Conferences",
     "publications": [
       {
+        "id": "Zait22b",
         "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Nicolas Anquetil", "Arnaud Thiefaine"],
         "title": "How Libraries Evolve: A Survey of Two Industrial Companies and an Open-Source Community",
         "conference": "29th Asia-Pacific Software Engineering Conference (APSEC)",
@@ -13,6 +14,7 @@
         "doi": "10.1109/APSEC57359.2022.00043"
       },
       {
+        "id": "Zait22a",
         "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Nicolas Anquetil", "Arnaud Thiefaine"],
         "title": "DepMiner: Automatic Recommendation of Transformation Rules for Method Deprecation",
         "conference": "International Conference on Software and Systems Reuse (ICSR)",
@@ -24,6 +26,7 @@
         "doi": "10.1007/978-3-031-08129-3_2"
       },
       {
+        "id": "Zait20a",
         "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Alexandre Bergel", "Mathieu Eveillard"],
         "title": "Suggesting Descriptive Method Names: An Exploratory Study of Two Machine Learning Approaches",
         "conference": "International Conference on the Quality of Information and Communications Technology (QUATIC)",
@@ -39,6 +42,7 @@
     "groupName": "International Workshops",
     "publications": [
       {
+        "id": "Zait22c",
         "authors": ["Oleksandr Zaitsev", "Sebastian Jordan Montaño", "Stéphane Ducasse"],
         "title": "How Fast is AI in Pharo? Benchmarking Linear Regression",
         "workshop": "International Workshop on Smalltalk Technologies (IWST)",
@@ -49,6 +53,7 @@
         "halId": "hal-03768601"
       },
       {
+        "id": "Delp19a",
         "authors": ["Julien Delplanque", "Stéphane Ducasse", "Oleksandr Zaitsev"],
         "title": "Magic Literals in Pharo",
         "workshop": "International Workshop on Smalltalk Technologies (IWST)",
@@ -59,6 +64,7 @@
         "halId": "hal-02266137"
       },
       {
+        "id": "Zait17a",
         "authors": ["Oleksandr Zaytsev", "Nick Papoulias", "Serge Stinckwich"],
         "title": "Towards Exploratory Data Analysis for Pharo",
         "workshop": "International Workshop on Smalltalk Technologies (IWST)",
@@ -74,6 +80,7 @@
     "groupName": "Booklets & Chapters",
     "publications": [
       {
+        "id": "Zait20b",
         "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse"],
         "title": "A-Priori Algorithm for Mining Frequent Itemsets",
         "bookTitle": "AI Book",
@@ -82,6 +89,7 @@
         "year": 2020
       },
       {
+        "id": "Zait19b",
         "authors": ["Oleksandr Zaitsev"],
         "title": "Data Analysis Made Simple with Pharo DataFrame",
         "publisher": "Square Brackets Associates",
@@ -93,6 +101,7 @@
     "groupName": "Other",
     "publications": [
       {
+        "id": "Zait20c",
         "authors": ["Oleksandr Zaitsev", "Stéphane Ducasse", "Nicolas Anquetil"],
         "title": "Characterizing Pharo Code: A Technical Report",
         "institution": "Inria Lille Nord Europe - Laboratoire CRIStAL - Université de Lille; Arolla",
