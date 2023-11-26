@@ -9,6 +9,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 
 import Header from '../Header';
+import Footer from '../Footer';
 import Navigation from '../Navigation';
 import ResearchPage from '../ResearchPage';
 import PublicationsPage from '../PublicationsPage';
@@ -24,7 +25,13 @@ import * as ROUTES from '../../constants/routes';
 const App = () => (
   <Router>
     <CssBaseline enableColorScheme />
-    <Box>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+      }}
+    >
       <Header/>
       <Navigation/>
       <Routes>
@@ -36,6 +43,7 @@ const App = () => (
         <Route exact path={ROUTES.BLOG} element={ <BlogPage/> } />
         <Route exact path={ROUTES.CV} element={ <CurriculumVitaePage/> } />
       </Routes>
+      <Footer/>
     </Box>
   </Router>
 );

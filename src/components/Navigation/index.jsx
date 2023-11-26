@@ -100,7 +100,7 @@ export default function Navigation() {
   };
 
   return (
-    <AppBar position="static" color="inherit" sx={{ boxShadow: 0, borderTop: 1, borderBottom: 1 }}>
+    <AppBar position="static" color="primary" sx={{ boxShadow: 0, borderTop: 1, borderBottom: 1 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="dense">
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
