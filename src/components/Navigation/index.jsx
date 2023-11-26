@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import IconButton from '@mui/material/IconButton';
 import SvgIcon from '@mui/material/SvgIcon';
 
+import MenuIcon from '@mui/icons-material/Menu';
 import LanguageIcon from '@mui/icons-material/Language';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SchoolIcon from '@mui/icons-material/School';
@@ -73,20 +78,81 @@ function socialIconButton(icon, url) {
   );
 }
 
+const pages = [
+  { "title": "Home", "route": ROUTES.LANDING },
+  { "title": "Publications", "route": ROUTES.PUBLICATIONS },
+  { "title": "Software", "route": ROUTES.SOFTWARE },
+  { "title": "Teaching", "route": ROUTES.TEACHING },
+  { "title": "Talks", "route": ROUTES.TALKS },
+  { "title": "Blog", "route": ROUTES.BLOG },
+  { "title": "CV", "route": ROUTES.CV },
+];
+
 export default function Navigation() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="inherit" sx={{ boxShadow: 0, borderTop: 1, borderBottom: 1 }}>
-        <Toolbar variant="dense">
-          <ButtonGroup variant="text" aria-label="text button group" sx={{ flexGrow: 1 }}>
-            <Button component={Link} to={ROUTES.LANDING} color="inherit">Home</Button>
-            <Button component={Link} to={ROUTES.PUBLICATIONS} color="inherit">Publications</Button>
-            <Button component={Link} to={ROUTES.SOFTWARE} color="inherit">Software</Button>
-            <Button component={Link} to={ROUTES.TEACHING} color="inherit">Teaching</Button>
-            <Button component={Link} to={ROUTES.TALKS} color="inherit">Talks</Button>
-            <Button component={Link} to={ROUTES.BLOG} color="inherit">Blog</Button>
-            <Button component={Link} to={ROUTES.CV} color="inherit">CV</Button>
-          </ButtonGroup>
+    <AppBar position="static" color="inherit" sx={{ boxShadow: 0, borderTop: 1, borderBottom: 1 }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters variant="dense">
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="main menu"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page.title} component={Link} to={page.route} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.title}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                key={page.title}
+                onClick={handleCloseNavMenu}
+                component={Link}
+                to={page.route}
+                color="inherit"
+              >
+                {page.title}
+              </Button>
+            ))}
+          </Box>
 
           <ButtonGroup variant="text" aria-label="icon button group">
             {socialIconButton(<GitHubIcon/>, "https://github.com/olekscode")}
@@ -101,7 +167,7 @@ export default function Navigation() {
             <Button variant="text" color="inherit" startIcon={<LanguageIcon/>}>EN</Button>
           </ButtonGroup>
         </Toolbar>
-      </AppBar>
-    </Box>
+      </Container>
+    </AppBar>
   );
 }
