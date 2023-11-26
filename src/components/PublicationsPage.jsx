@@ -9,8 +9,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ArticleIcon from '@mui/icons-material/Article';
 import Typography from '@mui/material/Typography';
 
-import './style.css';
-import publicationGroups from '../../data/publications.json';
+import publicationGroups from '../data/publications.json';
 
 
 function publicationString(publication) {

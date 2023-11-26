@@ -9,8 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-import './style.css';
-import courses from '../../data/courses.json';
+import courses from '../data/courses.json';
 
 
 function calculateEquivalentHours(lectureHours, supervisedHours, practicalHours) {

@@ -21,8 +21,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-import './style.css';
-import * as ROUTES from '../../constants/routes';
+import * as ROUTES from '../constants/routes';
 
 
 const mastodonIcon = (
