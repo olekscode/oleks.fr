@@ -11,7 +11,7 @@ import avatar from '../img/avatar.jpg';
 export default function Header() {
   return(
     <Container>
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", mt: 1.5 }}>
         <Grid container spacing={2}>
           <Grid item xs={3} md={1}>
             <Avatar alt="avatar" src={avatar} sx={{ width: 80, height: 80 }} />
