@@ -1,6 +1,33 @@
 [
   {
-    "groupName": "Conferences",
+    "groupName": "Journal",
+    "publications": [
+      {
+        "id": "Anqu22a",
+        "authors": [ "Nicolas Anquetil", "Julien Delplanque", "Stéphane Ducasse", "Oleksandr Zaitsev", "Christopher Fuhrman", "Yann-Gaël Guéhéneuc" ],
+        "title": "What Do Developers Consider Magic literals? A Smalltalk Perspective",
+        "journal": "Information and Software Technology (IST)",
+        "year": 2022,
+        "volume": 149,
+        "halId": "hal-03679130",
+        "doi": "10.1016/j.infsof.2022.106942"
+      },
+      {
+        "id": "Duca22a",
+        "authors": [ "Stéphane Ducasse", "Guillermo Polito", "Oleksandr Zaitsev", "Marcus Denker", "Pablo Tesone" ],
+        "title": "Deprewriter: On the fly rewriting method deprecations",
+        "journal": "Journal of Object Technology (JOT)",
+        "year": 2022,
+        "volume": 21,
+        "number": 1,
+        "pages": "1-23",
+        "halId": "hal-03563605",
+        "doi": "10.5381/jot.2022.21.1.a1"
+      }
+    ]
+  },
+  {
+    "groupName": "Conference",
     "publications": [
       {
         "id": "Zait22b",
