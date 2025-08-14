@@ -1,0 +1,6 @@
+	<div id="personalDetails">
+		<div><img src="files/ZAITSEV.JPG" width="128px"></div>
+		<div id="personalDetailsItem"> <a href="http://www.inria.fr/">SENS</a></div>
+		<div id="personalDetailsItem"> <a
+		<div id="personalDetailsItem"> <a href="mailto:oleksandr.zaitsev@cirad.fr">email</a></div>
+	</div>

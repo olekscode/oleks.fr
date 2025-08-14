@@ -1,0 +1,7 @@
+Foliage {
+	#baseUri: 'http://stephaneducasse.github.io',
+	#blogs: [ 
+		'news': 'News', 
+		'topics': 'Some topics' 
+	]
+}
