@@ -1,0 +1,8 @@
+<div id="header">
+	<div id="headerSiteTitle">
+	St&eacute;phane Ducasse
+	</div>
+
+	<div id="headerPageTitle"> <!--Empty for now it should be set using meta data and not hardcoded in the template -->
+	</div>
+</div>    <!--Closing header -->
