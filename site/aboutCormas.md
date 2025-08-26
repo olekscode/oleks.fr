@@ -14,5 +14,3 @@ From that perspective, I'm used to say that Pharo is what we have and not what w
 In essence, Pharo is the beginning of the journey and not the final goal. And you can change its future.
 
 _Some nice testimonies._ You can check what companies using Pharo are saying about Pharo: [Video](https://youtu.be/6tdkKNX2g4s)
-
-
