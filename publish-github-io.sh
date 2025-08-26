@@ -2,7 +2,7 @@
 
 
 SOURCES_BRANCH=${1:-source}
-DEPLOY_BRANCH=${2:-master}
+DEPLOY_BRANCH=${2:-main}
 
 if [ `git symbolic-ref --short HEAD` != $SOURCES_BRANCH ]; then
   echo "Attention: Not in sources branch: $SOURCES_BRANCH"
@@ -12,7 +12,7 @@ fi
 # Commit and push changes (may be empty)
 git add *
 git commit -m "publishing"
-git push
+git push --set-upstream origin source 
 
 # Move to the deployment branch
 git checkout $DEPLOY_BRANCH
