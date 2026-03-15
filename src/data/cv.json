@@ -1,0 +1,33 @@
+{
+  "headline": "Academic CV and structured overview of research activities.",
+  "position": "Permanent Researcher",
+  "institution": "CIRAD, UMR SENS",
+  "location": "Montpellier, France",
+  "summary": "This page is an online academic CV. Replace the placeholder entries below with your complete and accurate record.",
+  "positions": [
+    {
+      "title": "Permanent Researcher",
+      "institution": "CIRAD, UMR SENS",
+      "location": "Montpellier, France",
+      "start": "2023",
+      "end": "Present",
+      "description": "Research on participatory modelling, serious games, and scientific software for socio-ecological systems."
+    }
+  ],
+  "education": [
+    {
+      "title": "PhD in Computer Science",
+      "institution": "University of Lille / Inria",
+      "location": "France",
+      "start": "2019",
+      "end": "2023",
+      "description": "Replace this placeholder with your final thesis title and exact metadata."
+    }
+  ],
+  "service": [
+    "Conference organisation and reviewing",
+    "Research collaborations",
+    "Student supervision",
+    "Scientific software development and maintenance"
+  ]
+}

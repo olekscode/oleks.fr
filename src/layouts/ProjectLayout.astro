@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { title, description, tags = [], status, links = {} } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="content-page page-wrap">
+    <header class="page-header">
+      <p class="kicker">Project</p>
+      <h1>{title}</h1>
+      <p class="page-intro">{description}</p>
+      <p class="meta-line">{status ? `Status: ${status}` : ''}</p>
+      {tags.length > 0 && (
+        <ul class="tag-list">
+          {tags.map((tag) => <li>{tag}</li>)}
+        </ul>
+      )}
+      <div class="link-row">
+        {links.website && <a href={links.website}>Website</a>}
+        {links.github && <a href={links.github}>GitHub</a>}
+        {links.paper && <a href={links.paper}>Paper</a>}
+      </div>
+    </header>
+    <slot />
+  </article>
+</BaseLayout>

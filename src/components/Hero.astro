@@ -1,0 +1,44 @@
+---
+import site from '../data/site.json';
+import social from '../data/social.json';
+---
+
+<section class="hero-section">
+  <div class="hero-grid">
+
+    <div class="hero-photo">
+      <img
+        src="/images/profile.jpg"
+        alt="Oleksandr Zaitsev portrait"
+        loading="eager"
+      />
+    </div>
+
+    <div class="hero-copy">
+      <h1>Oleksandr Zaitsev</h1>
+
+      <p class="hero-role">{site.heroTitle}</p>
+      <p class="hero-themes">{site.heroThemes.join(' · ')}</p>
+      <p class="hero-affiliation">{site.affiliation}</p>
+
+      <p class="hero-intro">{site.intro}</p>
+
+      <ul class="hero-social" aria-label="Profile links">
+        {social.map((item) => (
+          <li>
+            <a href={item.href} target="_blank" rel="me noreferrer">
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="/cv/">CV</a>
+        <a class="button" href="/publications/">Publications</a>
+        <a class="button" href="/projects/">Projects</a>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => {
+  if (a.data.featured && !b.data.featured) return -1;
+  if (!a.data.featured && b.data.featured) return 1;
+  return a.data.title.localeCompare(b.data.title);
+});
+---
+<PageLayout title="Projects" description="Portfolio entries for software and research-linked systems I work on.">
+  <div class="project-list">
+    {projects.map((item) => (
+      <ProjectCard
+        title={item.data.title}
+        description={item.data.description}
+        href={`/projects/${item.slug}/`}
+        status={item.data.status}
+        tags={item.data.tags}
+      />
+    ))}
+  </div>
+</PageLayout>

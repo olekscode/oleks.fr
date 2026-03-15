@@ -1,0 +1,14 @@
+---
+import LinkedRow from './LinkedRow.astro';
+
+const { title, description, href, status, tags = [] } = Astro.props;
+---
+
+<LinkedRow
+  href={href}
+  title={title}
+  description={description}
+  meta={status || 'project'}
+  tags={tags}
+  ariaLabel={`Open project page for ${title}`}
+/>

@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import publications from '../../data/publications.json';
+import {
+  getPublicationPdfLink,
+  getPublicationSecondaryLinks,
+  formatBibtex
+} from '../../utils/publications.js';
+
+export async function getStaticPaths() {
+  return publications.map((item) => ({
+    params: { id: item.id },
+    props: { item }
+  }));
+}
+
+const { item } = Astro.props;
+const pdfLink = getPublicationPdfLink(item);
+const secondaryLinks = getPublicationSecondaryLinks(item);
+const bibtex = formatBibtex(item);
+
+const metadataParts = [
+  String(item.year),
+  item.type,
+  item.venue,
+  item.publisher
+].filter(Boolean);
+---
+
+<BaseLayout title={item.title} description={item.abstract}>
+  <article class="content-page page-wrap publication-page">
+    <header class="page-header publication-header">
+      <p class="section-topline">Publication</p>
+      <h1>{item.title}</h1>
+      <p class="page-intro publication-authors-full">{item.authors.join(', ')}</p>
+    </header>
+
+    {pdfLink && (
+      <section class="section-block publication-primary-action">
+        <a class="button button-primary publication-pdf-button" href={pdfLink.href} target="_blank" rel="noreferrer">
+          <svg
+            class="button-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M14 3v5h5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9 16h6M9 19h4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span>{pdfLink.label}</span>
+        </a>
+      </section>
+    )}
+
+    <section class="section-block publication-meta-inline">
+      <p>{metadataParts.join(' · ')}</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Abstract</h2>
+      <p>{item.abstract}</p>
+    </section>
+
+    {item.keywords?.length > 0 && (
+      <section class="section-block">
+        <h2>Keywords</h2>
+        <p class="publication-keywords-inline">{item.keywords.join(', ')}</p>
+      </section>
+    )}
+
+    {secondaryLinks.length > 0 && (
+      <section class="section-block">
+        <h2>Links</h2>
+        <p class="publication-links-inline">
+          {secondaryLinks.map((link, index) => (
+            <>
+              <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+              {index < secondaryLinks.length - 1 && <span class="publication-links-separator"> · </span>}
+            </>
+          ))}
+        </p>
+      </section>
+    )}
+
+    <section class="section-block">
+      <h2>BibTeX</h2>
+      <pre class="code-block-wrap"><code class="language-latex">{bibtex}</code></pre>
+    </section>
+  </article>
+</BaseLayout>

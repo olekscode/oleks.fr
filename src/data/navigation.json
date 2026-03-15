@@ -1,0 +1,8 @@
+[
+  { "label": "Publications", "href": "/publications/" },
+  { "label": "Projects", "href": "/projects/" },
+  { "label": "Blog", "href": "/blog/" },
+  { "label": "About", "href": "/about/" },
+  { "label": "CV", "href": "/cv/" },
+  { "label": "Contact", "href": "/contact/" }
+]

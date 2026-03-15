@@ -1,0 +1,60 @@
+---
+const { navigation = [] } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="container header-row">
+    <a class="site-brand" href="/">
+      <span class="brand-line">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" focusable="false">
+            <polyline
+              points="10,18 30,32 10,46"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <rect x="34" y="40" width="20" height="8" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="brand-name">Oleksandr Zaitsev</span>
+      </span>
+      <span class="brand-role">research@potato:~$</span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Open menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        {navigation.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+
+  <script is:inline>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+
+    if (toggle instanceof HTMLButtonElement && nav instanceof HTMLElement) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+  </script>
+</header>

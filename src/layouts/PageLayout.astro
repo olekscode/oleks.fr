@@ -1,0 +1,14 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="content-page page-wrap">
+    <header class="page-header">
+      <h1>{title}</h1>
+      {description && <p class="page-intro">{description}</p>}
+    </header>
+    <slot />
+  </article>
+</BaseLayout>

@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LinkedRow from '../../components/LinkedRow.astro';
+import publications from '../../data/publications.json';
+import { shortenAuthors, getPublicationPdfLink } from '../../utils/publications.js';
+
+const items = [...publications].sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+const years = [...new Set(items.map((item) => item.year))].sort((a, b) => b - a);
+const types = [...new Set(items.map((item) => item.type))].sort();
+---
+
+<BaseLayout title="Publications" description="Academic publications presented as a formal list, separate from blog writing and project notes.">
+  <article class="content-page page-wrap">
+    <header class="page-header page-header-tight">
+      <h1>Publications</h1>
+      <p class="page-intro">A formal research list with lightweight filtering and sorting.</p>
+    </header>
+
+    <section class="publication-controls" aria-label="Publication filters">
+      <div class="control-group">
+        <label for="publication-filter-type">Type</label>
+        <select id="publication-filter-type">
+          <option value="all">All</option>
+          {types.map((type) => <option value={type}>{type}</option>)}
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="publication-filter-year">Year</label>
+        <select id="publication-filter-year">
+          <option value="all">All</option>
+          {years.map((year) => <option value={String(year)}>{year}</option>)}
+        </select>
+      </div>
+
+      <div class="control-group control-group-wide">
+        <label for="publication-search">Search</label>
+        <input id="publication-search" type="search" placeholder="Title, venue, author" />
+      </div>
+
+      <div class="control-group">
+        <label for="publication-sort">Sort by</label>
+        <select id="publication-sort">
+          <option value="year-desc">Year: newest first</option>
+          <option value="year-asc">Year: oldest first</option>
+          <option value="title-asc">Title: A to Z</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="publication-results" class="publication-list publication-list-compact publication-results">
+      {items.map((item) => {
+        const authors = shortenAuthors(item.authors).join(', ');
+        const pdfLink = getPublicationPdfLink(item);
+
+        return (
+          <LinkedRow
+            href={`/publications/${item.id}/`}
+            title={item.title}
+            description={`${authors} — ${item.venue}`}
+            meta={`${item.year} · ${item.type}`}
+            links={pdfLink ? [{ ...pdfLink, external: true }] : []}
+            ariaLabel={`Open publication page for ${item.title}`}
+            dataAttributes={{
+              'data-type': item.type,
+              'data-year': String(item.year),
+              'data-title': item.title.toLowerCase(),
+              'data-venue': item.venue.toLowerCase(),
+              'data-authors': item.authors.join(' ').toLowerCase()
+            }}
+          />
+        );
+      })}
+    </div>
+
+    <p id="publication-empty" class="page-intro" hidden>No publications match the current filters.</p>
+  </article>
+
+  <script is:inline src="/js/publications-filter.js" defer></script>
+  <script is:inline src="/js/row-links.js" defer></script>
+</BaseLayout>

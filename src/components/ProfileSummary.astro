@@ -1,0 +1,38 @@
+---
+import site from '../data/site.json';
+const summary = site.profileSummary;
+---
+<section class="summary-block">
+  <div class="section-heading summary-heading">
+    <div>
+      <h2>Academic profile at a glance</h2>
+      <p>A compact view of position, research scope, and academic activity.</p>
+    </div>
+  </div>
+  <dl class="summary-grid">
+    <div>
+      <dt>Position</dt>
+      <dd>{summary.position}</dd>
+    </div>
+    <div>
+      <dt>Institution</dt>
+      <dd>{summary.institution}</dd>
+    </div>
+    <div>
+      <dt>Research focus</dt>
+      <dd>{summary.focus}</dd>
+    </div>
+    <div>
+      <dt>Software and infrastructure</dt>
+      <dd>{summary.software}</dd>
+    </div>
+    <div>
+      <dt>Academic work</dt>
+      <dd>{summary.service}</dd>
+    </div>
+    <div>
+      <dt>Collaborative scope</dt>
+      <dd>{summary.collaboration}</dd>
+    </div>
+  </dl>
+</section>

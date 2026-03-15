@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Contact details and institutional information for Oleksandr Zaitsev.">
+  <article class="content-page page-wrap">
+    <header class="page-header">
+      <h1>Contact</h1>
+      <p class="page-intro">
+        If you would like to discuss research collaborations, scientific software, participatory modelling, or related topics, feel free to get in touch.
+      </p>
+    </header>
+
+    <section class="contact-layout">
+      <div class="contact-details">
+        <p class="terminal-instruction">
+          Type <code>whoami</code> and press Enter to reveal the email address
+        </p>
+
+        <div class="terminal-box">
+          <span class="terminal-prefix">research@potato:~$</span>
+          <input
+            id="terminal-input"
+            class="terminal-input"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+
+        <p id="email-output" class="terminal-output is-hidden"></p>
+
+        <div class="contact-block">
+          <p class="contact-address">
+            CIRAD, Departement Environnements et Societes<br>
+            UMR SENS (CIRAD, IRD, UPVM)<br>
+            TA C-119/F106<br>
+            Campus international de Baillarguet<br>
+            34398 Montpellier cedex 5, France
+          </p>
+          <p>
+            <a href="https://umr-sens.fr" target="_blank" rel="noreferrer">umr-sens.fr</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <iframe
+          title="Map showing CIRAD Campus international de Baillarguet"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=3.8347%2C43.6207%2C3.8947%2C43.6607&amp;layer=mapnik&amp;marker=43.6407%2C3.8647"
+          loading="lazy"
+        ></iframe>
+
+        <p class="contact-map-link">
+          <a
+            href="https://www.openstreetmap.org/?mlat=43.6407&mlon=3.8647#map=15/43.6407/3.8647"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open in OpenStreetMap
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <script is:inline>
+  const input = document.getElementById('terminal-input');
+  const output = document.getElementById('email-output');
+
+  if (input instanceof HTMLInputElement && output instanceof HTMLElement) {
+    const chunks = [
+      'rf',
+      '.dari',
+      'c@',
+      'vestia',
+      'z.rdnask',
+      'elo'
+    ];
+
+    function decodeEmail() {
+      return chunks.join('').split('').reverse().join('');
+    }
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const command = input.value.trim();
+
+        if (command === 'whoami') {
+          const email = decodeEmail();
+          const link = document.createElement('a');
+          link.href = `mailto:${email}`;
+          link.textContent = email;
+
+          output.innerHTML = '';
+          output.appendChild(link);
+        } else {
+          output.textContent = 'command not found';
+        }
+
+        output.classList.remove('is-hidden');
+        input.value = '';
+      }
+    });
+  }
+</script>
+  </article>
+</BaseLayout>

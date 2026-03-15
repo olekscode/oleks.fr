@@ -1,0 +1,64 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import cv from '../data/cv.json';
+---
+<PageLayout title="CV" description={cv.headline}>
+  <p><a class="button button-primary" href="/files/cv/oleksandr-zaitsev-cv.pdf">Download CV PDF</a></p>
+
+  <section class="section-block">
+    <SectionHeading title="Current position" />
+    <div class="cv-list">
+      <article class="cv-entry">
+        <div>
+          <h3>{cv.position}</h3>
+          <p>{cv.institution} · {cv.location}</p>
+          <p>{cv.summary}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <SectionHeading title="Positions" />
+    <div class="cv-list">
+      {cv.positions.map((item) => (
+        <article class="cv-entry">
+          <div>
+            <h3>{item.title}</h3>
+            <p>{item.institution} · {item.location}</p>
+            <p>{item.description}</p>
+          </div>
+          <div class="cv-entry-side">
+            <p class="publication-meta">{item.start} - {item.end}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-block">
+    <SectionHeading title="Education" />
+    <div class="cv-list">
+      {cv.education.map((item) => (
+        <article class="cv-entry">
+          <div>
+            <h3>{item.title}</h3>
+            <p>{item.institution} · {item.location}</p>
+            <p>{item.description}</p>
+          </div>
+          <div class="cv-entry-side">
+            <p class="publication-meta">{item.start} - {item.end}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-block">
+    <SectionHeading title="Service" />
+    <ul>
+      {cv.service.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+</PageLayout>

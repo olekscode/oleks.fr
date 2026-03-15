@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProfileSummary from '../components/ProfileSummary.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import PublicationList from '../components/PublicationList.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import BlogPreview from '../components/BlogPreview.astro';
+import publications from '../data/publications.json';
+
+const featuredPublications = publications.filter((item) => item.featured).slice(0, 4);
+const projects = (await getCollection('projects')).filter((item) => item.data.featured).slice(0, 3);
+const blogPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date - a.data.date)
+  .filter((item) => item.data.featured)
+  .slice(0, 2);
+---
+<BaseLayout>
+  <div class="container page-stack">
+    <Hero />
+    <ProfileSummary />
+
+    <section class="section-block">
+      <SectionHeading title="Selected publications" href="/publications/" intro="Research outputs presented as a formal publication list." />
+      <PublicationList items={featuredPublications} />
+    </section>
+
+    <section class="section-block">
+      <SectionHeading title="Selected projects" href="/projects/" intro="Portfolio entries for software systems, platforms, and research-linked infrastructure." />
+      <div class="project-list">
+        {projects.map((item) => (
+          <ProjectCard
+            title={item.data.title}
+            description={item.data.description}
+            href={`/projects/${item.slug}/`}
+            status={item.data.status}
+            tags={item.data.tags}
+          />
+        ))}
+      </div>
+    </section>
+
+    <section class="section-block">
+      <SectionHeading title="Recent writing" href="/blog/" intro="Occasional notes, reflections, and field-oriented writing." />
+      <BlogPreview items={blogPosts} />
+    </section>
+  </div>
+</BaseLayout>

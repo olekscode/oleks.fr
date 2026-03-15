@@ -1,0 +1,22 @@
+{
+  "siteName": "Oleksandr Zaitsev",
+  "siteUrl": "https://oleks.fr",
+  "title": "Oleksandr Zaitsev | Computer Science Researcher",
+  "description": "Personal website of Oleksandr Zaitsev: publications, projects, blog, CV, and academic profile.",
+  "heroTitle": "Computer Science Researcher",
+  "heroThemes": [
+    "Participatory modelling",
+    "Serious games",
+    "Scientific software"
+  ],
+  "affiliation": "CIRAD · UMR SENS · Montpellier, France",
+  "intro": "I work on computational tools and participatory approaches for studying socio-ecological systems, with a particular interest in simulation, serious games, and scientific software as research infrastructure.",
+  "profileSummary": {
+    "position": "Permanent Researcher",
+    "institution": "CIRAD, UMR SENS",
+    "focus": "Participatory modelling, agent-based modelling, serious games, and software engineering for scientific tools",
+    "software": "Cormas and related research software ecosystems",
+    "service": "Publications, supervision, scientific collaborations, and community leadership",
+    "collaboration": "Interdisciplinary work across computer science, modelling, and environmental research"
+  }
+}

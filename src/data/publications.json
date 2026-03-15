@@ -1,0 +1,45 @@
+[
+  {
+    "id": "trace-of-change-2025",
+    "title": "Trace of change: How stigmergy maps social learning loops in Companion Modeling through participatory simulation",
+    "year": 2025,
+    "type": "journal article",
+    "venue": "Journal of Environmental Management",
+    "publisher": "Elsevier",
+    "authors": [
+      "François Vendel",
+      "Oleksandr Zaitsev",
+      "Pierre Bommel",
+      "Ibra Toure"
+    ],
+    "abstract": "This study explored integrating stigmergy in Companion Modeling (ComMod) to enhance social learning loops (SLL) in participatory natural resource management. Taking a case study from the Ferlo region of Senegal, the research focuses on how stigmergy – a concept derived from biology involving indirect coordination through environmental traces – stimulates and documents cognitive, normative, and relational changes among stakeholders. By leaving digital traces during the iterative development of an Agent-Based Model (ABM), stigmergy support participants in co-constructing the model representing local agro-sylvo-pastoral dynamics. The paper highlights the role of stigmergy in fostering trust, knowledge sharing, and collaboration among diverse stakeholders and research team in a ComMod process, helping to refine the collective strategies aimed at sustainable land management. This research showed that stigmergic imprints can be used as a tool for monitor how learning and model development evolve during iterative modeling workshops, contributing to more adaptive and resilient resource governance strategies.",
+    "featured": true,
+    "keywords": [
+      "Companion Modeling",
+      "Social learning loops",
+      "Stigmergy",
+      "Senegal",
+      "Sylvopastoralism"
+    ],
+    "official": {
+      "url": "https://doi.org/10.xxxx/xxxxx",
+      "label": "Publisher page"
+    },
+    "access": {
+      "pdf": {
+        "url": "https://hal.science/.../document",
+        "label": "Open access PDF",
+        "openAccess": true
+      },
+      "preprint": null
+    },
+    "archives": {
+      "hal": "https://hal.science/...",
+      "arxiv": null,
+      "agritrop": "https://agritrop.cirad.fr/..."
+    },
+    "identifiers": {
+      "doi": "10.xxxx/xxxxx"
+    }
+  }
+]

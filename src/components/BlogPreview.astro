@@ -1,0 +1,18 @@
+---
+import LinkedRow from './LinkedRow.astro';
+import { formatDate } from '../utils/dates.js';
+
+const { items = [] } = Astro.props;
+---
+
+<div class="blog-list blog-list-compact">
+  {items.map((post) => (
+    <LinkedRow
+      href={`/blog/${post.slug}/`}
+      title={post.data.title}
+      description={post.data.excerpt || post.data.description}
+      meta={formatDate(post.data.date)}
+      ariaLabel={`Open blog post ${post.data.title}`}
+    />
+  ))}
+</div>

@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import 'prismjs/themes/prism.css';
+import prismScript from '../scripts/prism.js?url';
+import site from '../data/site.json';
+import navigation from '../data/navigation.json';
+import social from '../data/social.json';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Seo from '../components/Seo.astro';
+
+const {
+  title = site.title,
+  description = site.description,
+  pathname = Astro.url.pathname
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Seo title={title} description={description} pathname={pathname} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <Header navigation={navigation} social={social} />
+    <main class="page-shell">
+      <slot />
+    </main>
+    <Footer social={social} />
+
+    <script is:inline src="/js/row-links.js" defer></script>
+    <script type="module" src={prismScript}></script>
+  </body>
+</html>

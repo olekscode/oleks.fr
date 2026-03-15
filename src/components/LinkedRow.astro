@@ -1,0 +1,51 @@
+---
+const {
+  href,
+  title,
+  description,
+  meta,
+  tags = [],
+  links = [],
+  dataAttributes = {},
+  ariaLabel
+} = Astro.props;
+---
+
+<article
+  class="linked-row publication-row row-link"
+  data-href={href}
+  tabindex="0"
+  role="link"
+  aria-label={ariaLabel || `Open ${title}`}
+  {...dataAttributes}
+>
+  <div class="linked-row-main publication-main">
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+  </div>
+
+  <div class="linked-row-side publication-side">
+    {meta && <p class="publication-meta">{meta}</p>}
+
+    {tags.length > 0 && (
+      <ul class="tag-list tag-list-inline">
+        {tags.map((tag) => <li>{tag}</li>)}
+      </ul>
+    )}
+
+    {links.length > 0 && (
+      <div class="link-row compact-links">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noreferrer" : undefined}
+            data-stop-row-click="true"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</article>
