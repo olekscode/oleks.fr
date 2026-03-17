@@ -1,0 +1,233 @@
+[
+   {
+    "id": "",
+    "type": "journal article",
+    "peerReviewed": true,
+    "featured": true,
+    "title": "",
+    "authors": [
+      "Surname, Name",
+      "Surname, Name"
+    ],
+    "year": 2025,
+    "month": "May",
+    "journal": "",
+    "publisher": "",
+    "issn": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "articleNumber": "",
+    "abstract": "",
+    "keywords": [
+      "one",
+      "two"
+    ],
+    "officialUrl": "",
+    "doi": "",
+    "pdf": {
+      "openAccess": "",
+      "preprint": ""
+    },
+    "archives": {
+      "hal": "",
+      "arxiv": "",
+      "agritrop": ""
+    }
+  },
+  {
+    "id": "",
+    "type": "conference paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "",
+    "authors": [
+      "Surname, Name",
+      "Surname, Name"
+    ],
+    "year": 2023,
+    "month": "August",
+    "event": "",
+    "series": "",
+    "publisher": "",
+    "city": "",
+    "country": "",
+    "pages": "",
+    "isbn": "",
+    "abstract": "",
+    "keywords": [
+      "one",
+      "two"
+    ],
+    "officialUrl": "",
+    "doi": "",
+    "pdf": {
+      "openAccess": "",
+      "preprint": ""
+    },
+    "archives": {
+      "hal": "",
+      "arxiv": "",
+      "agritrop": ""
+    }
+  },
+  {
+    "id": "",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "",
+    "authors": [
+      "Surname, Name",
+      "Surname, Name"
+    ],
+    "year": 2023,
+    "month": "August",
+    "event": "",
+    "series": "",
+    "publisher": "",
+    "city": "",
+    "country": "",
+    "pages": "",
+    "isbn": "",
+    "abstract": "",
+    "keywords": [
+      "one",
+      "two"
+    ],
+    "officialUrl": "",
+    "doi": "",
+    "pdf": {
+      "openAccess": "",
+      "preprint": ""
+    },
+    "archives": {
+      "hal": "",
+      "arxiv": "",
+      "agritrop": ""
+    }
+  },
+  {
+    "id": "",
+    "type": "book chapter",
+    "peerReviewed": false,
+    "featured": false,
+    "title": "",
+    "authors": [
+      "Surname, Name",
+      "Surname, Name"
+    ],
+    "year": 2023,
+    "month": "August",
+    "book": "",
+    "editors": [
+      "Surname, Name",
+      "Surname, Name"
+    ],
+    "publisher": "",
+    "pages": "",
+    "isbn": "",
+    "abstract": "",
+    "keywords": [
+      "one",
+      "two"
+    ],
+    "officialUrl": "",
+    "doi": "",
+    "pdf": {
+      "openAccess": "",
+      "preprint": ""
+    },
+    "archives": {
+      "hal": "",
+      "arxiv": "",
+      "agritrop": ""
+    }
+  },
+  {
+    "id": "",
+    "type": "booklet",
+    "peerReviewed": false,
+    "featured": false,
+    "title": "",
+    "authors": [
+      "Surname, Name",
+      "Surname, Name"
+    ],
+    "year": 2023,
+    "month": "August",
+    "publisher": "",
+    "isbn": "",
+    "abstract": "",
+    "keywords": [
+      "one",
+      "two"
+    ],
+    "officialUrl": "",
+    "doi": "",
+    "pdf": {
+      "openAccess": "",
+      "preprint": ""
+    },
+    "archives": {
+      "hal": "",
+      "arxiv": "",
+      "agritrop": ""
+    }
+  },
+  {
+    "id": "",
+    "type": "technical report",
+    "peerReviewed": false,
+    "featured": false,
+    "title": "",
+    "authors": [
+      "Surname, Name",
+      "Surname, Name"
+    ],
+    "year": 2023,
+    "month": "August",
+    "abstract": "",
+    "keywords": [
+      "one",
+      "two"
+    ],
+    "officialUrl": "",
+    "pdf": {
+      "preprint": ""
+    },
+    "archives": {
+      "hal": "",
+      "arxiv": "",
+      "agritrop": ""
+    }
+  },
+  {
+    "id": "",
+    "type": "thesis",
+    "thesisType": "master",
+    "institution": "",
+    "peerReviewed": false,
+    "featured": false,
+    "title": "",
+    "authors": [
+      "Surname, Name"
+    ],
+    "year": 2023,
+    "month": "August",
+    "abstract": "",
+    "keywords": [
+      "one",
+      "two"
+    ],
+    "officialUrl": "",
+    "pdf": {
+      "preprint": ""
+    },
+    "archives": {
+      "hal": "",
+      "arxiv": "",
+      "agritrop": ""
+    }
+  }
+]

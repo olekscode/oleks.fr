@@ -1,45 +1,514 @@
 [
   {
-    "id": "trace-of-change-2025",
-    "title": "Trace of change: How stigmergy maps social learning loops in Companion Modeling through participatory simulation",
-    "year": 2025,
-    "type": "journal article",
-    "venue": "Journal of Environmental Management",
-    "publisher": "Elsevier",
+    "id": "package-completion-iwst-2025",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "Package-Aware Approach for Repository-Level Code Completion in Pharo",
     "authors": [
-      "François Vendel",
-      "Oleksandr Zaitsev",
-      "Pierre Bommel",
-      "Ibra Toure"
+      "Abedelkader, Omar",
+      "Ducasse, Stéphane",
+      "Zaitsev, Oleksandr",
+      "Robbes, Romain",
+      "Polito, Guillermo"
     ],
-    "abstract": "This study explored integrating stigmergy in Companion Modeling (ComMod) to enhance social learning loops (SLL) in participatory natural resource management. Taking a case study from the Ferlo region of Senegal, the research focuses on how stigmergy – a concept derived from biology involving indirect coordination through environmental traces – stimulates and documents cognitive, normative, and relational changes among stakeholders. By leaving digital traces during the iterative development of an Agent-Based Model (ABM), stigmergy support participants in co-constructing the model representing local agro-sylvo-pastoral dynamics. The paper highlights the role of stigmergy in fostering trust, knowledge sharing, and collaboration among diverse stakeholders and research team in a ComMod process, helping to refine the collective strategies aimed at sustainable land management. This research showed that stigmergic imprints can be used as a tool for monitor how learning and model development evolve during iterative modeling workshops, contributing to more adaptive and resilient resource governance strategies.",
-    "featured": true,
+    "year": 2025,
+    "month": "July",
+    "event": "International Workshop on Smalltalk Technologies",
+    "publisher": "CEUR-WS",
+    "city": "Gdansk",
+    "country": "Poland",
+    "abstract": "Pharo offers a sophisticated completion engine based on semantic heuristics, which coordinates specific fetchers within a lazy architecture. These heuristics can be recomposed to support various activities (e.g., live programming or history usage navigation). While this system is powerful, it does not account for the repository structure when suggesting global names such as class names, class variables, or global variables. As a result, it does not prioritize classes within the same package or project, treating all global names equally. In this paper, we present a new heuristic that addresses this limitation. Our approach searches variable names in a structured manner: it begins with the package of the requesting class, then expands to other packages within the same repository, and finally considers the global namespace. We describe the logic behind this heuristic and evaluate it against the default semantic heuristic and one that directly queries the global namespace. Preliminary results indicate that the Mean Reciprocal Rank (MRR) improves, confirming that package-awareness completions deliver more accurate and relevant suggestions than the previous flat global approach.",
     "keywords": [
-      "Companion Modeling",
-      "Social learning loops",
-      "Stigmergy",
-      "Senegal",
-      "Sylvopastoralism"
+      "repository-level completion",
+      "code completion",
+      "pharo",
+      "smalltalk"
     ],
-    "official": {
-      "url": "https://doi.org/10.xxxx/xxxxx",
-      "label": "Publisher page"
-    },
-    "access": {
-      "pdf": {
-        "url": "https://hal.science/.../document",
-        "label": "Open access PDF",
-        "openAccess": true
-      },
-      "preprint": null
+    "officialUrl": "https://ceur-ws.org/Vol-4139",
+    "pdf": {
+      "openAccess": "https://ceur-ws.org/Vol-4139/Paper01.pdf",
+      "preprint": "https://hal.science/hal-05446902v1/document"
     },
     "archives": {
-      "hal": "https://hal.science/...",
-      "arxiv": null,
-      "agritrop": "https://agritrop.cirad.fr/..."
+      "hal": "https://hal.science/hal-05446902v1",
+      "arxiv": "https://arxiv.org/abs/2601.05617"
+    }
+  },
+  {
+    "id": "gamifying-cormas-iwst-2025",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "Gamifying agent-based models in Cormas: Towards the playable architecture for serious games in Pharo",
+    "authors": [
+      "Kupusovic, Jovan",
+      "Zaitsev, Oleksandr",
+      "Bommel, Pierre",
+      "Le Page, Christophe",
+      "Rakić, Gordana"
+    ],
+    "year": 2025,
+    "month": "July",
+    "event": "International Workshop on Smalltalk Technologies",
+    "publisher": "CEUR-WS",
+    "city": "Gdansk",
+    "country": "Poland",
+    "abstract": "Agent-based modelling (ABM) and role-playing games (RPGs) are among the main practices used in the companion modelling approach (ComMod). While ABMs provide higher computational capabilities, RPGs are more accessible and more engaging for the local stakeholders. There is a growing interest in combining those two approaches, in fact, games can be seen as ABMs where human players act as agents. However, to the best of our knowledge, there a no ABM platforms that support gaming out-of the box. In this work, we propose to extend Cormas, an agent-based modelling platform to provide \"playability\" for model entities. This way, any model developed in Cormas can potentially be played as a game, and any game can be run as a simulation. \"Playability\" is achieved by extending the architecture of Cormas with several layers. Through the implementation of the serious game \"Planet C\", we established each layer one by one, reaching towards the desired architecture.",
+    "keywords": [
+      "agent-based modelling",
+      "serious games",
+      "companion modelling",
+      "cormas",
+      "pharo",
+      "software architecture",
+      "gamification"
+    ],
+    "officialUrl": "https://ceur-ws.org/Vol-4139",
+    "pdf": {
+      "openAccess": "https://ceur-ws.org/Vol-4139/Paper07.pdf",
+      "preprint": "https://hal.science/hal-05466616v1/document"
     },
-    "identifiers": {
-      "doi": "10.xxxx/xxxxx"
+    "archives": {
+      "hal": "https://hal.science/hal-05466616v1",
+      "agritrop": "https://agritrop.cirad.fr/616216/"
+    }
+  },
+  {
+    "id": "trace-of-change-2025",
+    "type": "journal article",
+    "peerReviewed": true,
+    "featured": true,
+    "title": "Trace of change: How stigmergy maps social learning loops in Companion Modeling through participatory simulation",
+    "authors": [
+      "Vendel, François",
+      "Zaitsev, Oleksandr",
+      "Bommel, Pierre",
+      "Touré, Ibra",
+      "Cesaro, Jean-Daniel",
+      "Diop, Penda",
+      "Fall Ba, Marieme",
+      "Mbaye, Tamsir",
+      "Delay, Etienne"
+    ],
+    "year": 2025,
+    "month": "May",
+    "journal": "Journal of Environmental Management",
+    "publisher": "Elsevier",
+    "issn": "0301-4797",
+    "volume": "383",
+    "articleNumber": "125292",
+    "abstract": "This study explored integrating stigmergy in Companion Modeling (ComMod) to enhance social learning loops (SLL) in participatory natural resource management. Taking a case study from the Ferlo region of Senegal, the research focuses on how stigmergy – a concept derived from biology involving indirect coordination through environmental traces – stimulates and documents cognitive, normative, and relational changes among stakeholders. By leaving digital traces during the iterative development of an Agent-Based Model (ABM), stigmergy support participants in co-constructing the model representing local agro-sylvo-pastoral dynamics. The paper highlights the role of stigmergy in fostering trust, knowledge sharing, and collaboration among diverse stakeholders and research team in a ComMod process, helping to refine the collective strategies aimed at sustainable land management. This research showed that stigmergic imprints can be used as a tool for monitor how learning and model development evolve during iterative modeling workshops, contributing to more adaptive and resilient resource governance strategies.",
+    "keywords": [
+      "companion modeling",
+      "social learning loops",
+      "stigmergy",
+      "senegal",
+      "sylvopastoralism"
+    ],
+    "officialUrl": "https://www.sciencedirect.com/science/article/pii/S030147972501268X",
+    "doi": "10.1016/j.jenvman.2025.125292",
+    "pdf": {
+      "preprint": "https://hal.science/hal-05068733v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.science/hal-05068733v1",
+      "agritrop": "https://agritrop.cirad.fr/613056"
+    }
+  },
+  {
+    "id": "cormas-raw-2023",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "Cormas: The Software for Participatory Modelling and its Application for Managing Natural Resources in Senegal",
+    "authors": [
+      "Zaitsev, Oleksandr",
+      "Vendel, François",
+      "Delay, Etienne"
+    ],
+    "year": 2023,
+    "month": "August",
+    "event": "Euro-Par: Parallel Processing Workshops",
+    "series": "Lecture Notes in Computer Science",
+    "publisher": "Springer",
+    "city": "Limassol",
+    "country": "Cyprus",
+    "pages": "76-84",
+    "isbn": "978-3-031-48802-3",
+    "abstract": "Cormas is an agent-based simulation platform developed in the late 90s by the Green research at CIRAD unit to support the management of natural resources and understand the interactions between natural and social dynamics. This platform is well-suited for a participatory simulation approach that empowers local stakeholders by including them in all modelling and knowledge-sharing steps. In this short paper, we present the Cormas platform and discuss its unique features and their importance for the participatory simulation approach. We then present the early results of our ongoing study on managing pastoral resources in the Sahel region, identify the problems faced by local stakeholders, and discuss the potential use of Cormas at the next stage of our study to collectively model and understand the effective ways of managing the shared agro-sylvo-pastoral resources.",
+    "keywords": [
+      "resource management",
+      "agent-based modelling",
+      "participatory simulation",
+      "software"
+    ],
+    "officialUrl": "https://link.springer.com/chapter/10.1007/978-3-031-48803-0_7",
+    "doi": "10.1007/978-3-031-48803-0_41",
+    "pdf": {
+      "preprint": "https://hal.science/hal-04243082v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.science/hal-04243082v1",
+      "arxiv": "https://arxiv.org/abs/2310.12534",
+      "agritrop": "https://agritrop.cirad.fr/607457/"
+    }
+  },
+  {
+    "id": "dataframe-iwst-2023",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "Pharo DataFrame: Past, Present, and Future",
+    "authors": [
+      "Safina, Larisa",
+      "Zaitsev, Oleksandr",
+      "Ferlicot-Delbecque, Cyril",
+      "Sow, Papa Ibrahima"
+    ],
+    "year": 2023,
+    "month": "August",
+    "event": "International Workshop on Smalltalk Technologies",
+    "publisher": "CEUR-WS",
+    "city": "Lyon",
+    "country": "France",
+    "abstract": "DataFrame is a tabular data structure for data analysis. It is a two-dimensional table (similar to a spreadsheet) with an extensive API for querying and manipulating the data. Data frames are available in many programming languages (e.g., pandas in Python or data.frame in R), they are the go-to tools for data scientists and machine learning practitioners. Pharo DataFrame was first released in 2017. Since then, the library underwent many changes and improvements. In this paper, we present the Pharo DataFrame library, show examples of its usage, and compare its API to that of pandas. We overview the changes that have been made since DataFrame v1.0, discuss the limitations of the current implementation, and present the roadmap for future.",
+    "keywords": [
+      "pharo",
+      "dataframe",
+      "data analysis",
+      "data structure"
+    ],
+    "officialUrl": "https://ceur-ws.org/Vol-3627",
+    "pdf": {
+      "openAccess": "https://ceur-ws.org/Vol-3627/paper12.pdf",
+      "preprint": "https://hal.science/hal-04212030/document"
+    },
+    "archives": {
+      "hal": "https://hal.science/hal-04212030",
+      "agritrop": "https://agritrop.cirad.fr/608298/"
+    }
+  },
+  {
+    "id": "phd-thesis",
+    "type": "thesis",
+    "thesisType": "phd",
+    "institution": "Université de Lille",
+    "peerReviewed": false,
+    "featured": false,
+    "title": "Data Mining-based tools to support library update",
+    "authors": [
+      "Zaitsev, Oleksandr"
+    ],
+    "year": 2022,
+    "month": "October",
+    "abstract": "Modern software can be characterized by high degree of reuse of external artefacts. Applications depend on multiple libraries and frameworks, which in turn can also depend on other libraries and frameworks. Like any other software, libraries evolve. They release new versions, often incompatible with the previous ones. This forces client applications that depend on those libraries to update their code in response to library evolution.Updating the dependencies can be a difficult and time consuming task for client developers. It involves repetitive operations and requires the knowledge about the changes that were made to the library. Knowledge that can be shared by library developers or extracted by automated tools from source code or commit history.In recent years, multiple approaches have been proposed to mine the data or apply machine learning techniques and extract knowledge about library update in forms of rules. However, most of those approaches only focus on client developers and do not consider the expertise of library developers. They consider only simple method-to-method replacements and are only designed for statically-typed programming languages.In this thesis, we address this gap in literature with five main contributions:(1) a survey of library and client developers from two industrial companies and an open-source community;(2) first detailed documentation of the Deprewriter approach and tool in Pharo which introduces deprecations that dynamically update client code with transformation rules;(3) a study of how Deprewriter was adopted by the Pharo community through the analysis of source code in Pharo~8 and a developer survey;(4) DepMiner --- a novel approach to infer the rules for Deprewriter based on the commit history of a project;(5) a generalization of DepMiner as a new holistic approach to support library developers in the task of library update.The results of the research reported in this thesis will advance the field of automated library update by exploring the perspective of library developers and the context of the dynamically-typed languages that were often overlooked in the previous studies.",
+    "keywords": [
+      "software evolution",
+      "library update",
+      "library migration",
+      "data mining"
+    ],
+    "officialUrl": "https://theses.fr/2022ULILB028",
+    "pdf": {
+      "preprint": "https://theses.hal.science/tel-03998632v1/document",
+      "openAccess": "https://pepite-depot.univ-lille.fr/LIBRE/EDMADIS/2022/2022ULILB028.pdf"
+    },
+    "archives": {
+      "hal": "https://theses.hal.science/tel-03998632v1"
+    }
+  },
+  {
+    "id": "deprewriter-2022",
+    "type": "journal article",
+    "peerReviewed": true,
+    "featured": true,
+    "title": "Deprewriter: On the fly rewriting method deprecations",
+    "authors": [
+      "Ducasse, Stéphane",
+      "Polito, Guillermo",
+      "Zaitsev, Oleksandr",
+      "Denker, Marcus",
+      "Tesone, Pablo"
+    ],
+    "year": 2022,
+    "journal": "The Journal of Object Technology",
+    "issn": "1660-1769",
+    "volume": "21",
+    "issue": "1",
+    "pages": "1-23",
+    "abstract": "Deprecations are a common way to indicate that a given feature or API will not be available in subsequent versions of a library or framework. While raising deprecation warnings lets developers of libraries evolve their APIs, the developers of client applications often have to manually rewrite their applications to adapt to the deprecation (removal, new APIs, ... ). Some may use static analysis tools to support the rewriting. However, dynamically-typed languages or the use of reflective features often produce incorrect rewrite candidates. This is a costly activity that can lead to bug introductions. In this article, we present a method deprecation approach and a tool called DEPREWRITER that can automatically rewrite the callers of deprecated methods during program execution. Clients of a deprecated API execute their program and associated tests, and DEPREWRITER dynamically rewrites the source code of methods that called a deprecated API to use the new API. The implementation of DEPREWRITER is based on dynamic program transformation: when a deprecated method is executed, a program transformation engine rewrites and recompiles the caller's code before continuing the execution. The approach presented in this article has been developed by the Pharo consortium. Since 2016, DEPREWRITER is used in production in multiple distributions of the Pharo programming language: Pharo 6, 7, 8, and 9 alpha. This article presents and validates this approach. The validation is done in two steps: first with an analysis of deprecations available in Pharo 8 and second with an open survey of software developers about DEPREWRITER. We studied 367 Pharo 8 deprecations, among which we analyzed the 218 rewriting deprecations that use transformation rules. We identified the validity conditions and reported defects to the community. We also proposed 33 transformation rules to be added to the non-rewriting deprecations. Both contributions were accepted into Pharo 9 alpha. We classified the rules and identified possible points of improvement. In addition, we performed a user survey and collected information from 46 software developers: some of them used existing DEPREWRITER' rules and executed them on their code, others used DEPREWRITER to create rewriting deprecations, and finally, some were not aware of DEPREWRITER. 28 of 46 developers (60%) reported that the rewriting deprecations helped them, while 10 stated the inverse and 8 were uncertain. After discussing the current implementation, we sketch possible implementations for other languages than Pharo, showing that the approach is general enough to be applied to other languages.",
+    "keywords": [
+      "dynamically-typed language",
+      "deprecation",
+      "automatic rewriting",
+      "program transformation",
+      "runtime",
+      "refactoring",
+      "reflection",
+      "pharo"
+    ],
+    "officialUrl": "https://www.jot.fm/contents/issue_2022_01/article1.html",
+    "doi": "10.5381/jot.2022.21.1.a1",
+    "pdf": {
+      "openAccess": "https://www.jot.fm/issues/issue_2022_01/article1.pdf",
+      "preprint": "https://hal.inria.fr/hal-03563605v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.inria.fr/hal-03563605v1"
+    }
+  },
+  {
+    "id": "magic-literals-ist-2022",
+    "type": "journal article",
+    "peerReviewed": true,
+    "featured": true,
+    "title": "What do developers consider magic literals? A Smalltalk perspective",
+    "authors": [
+      "Anquetil, Nicolas",
+      "Delplanque, Julien",
+      "Ducasse, Stéphane",
+      "Zaitsev, Oleksandr",
+      "Fuhrman, Christopher"
+    ],
+    "year": 2022,
+    "journal": "Information and Software Technology",
+    "publisher": "Elsevier",
+    "issn": "0950-5849",
+    "volume": "149",
+    "articleNumber": "106942",
+    "abstract": "Literals are constant values (numbers, strings, etc.) used in the source code. Magic literals are such values used without an explicit explanation of their meaning. Such undocumented values may hinder source-code comprehension, negatively impacting maintenance. Relatively little literature can be found on the subject beyond the usual (and very old) recommendation of avoiding literals and preferring named constants. Yet, magic literals are still routinely found in source code. We studied literal values in source code to understand when they should be considered magic or not (i.e., acceptable). First, we perform a qualitative study of magic literals, to establish why and under which conditions they are considered harmful. We formalize hypotheses about the reasoning behind how literals are considered magic. Second, we perform a quantitative study on seven real systems ranging from small (a few classes) to large (thousands of classes). We report the literals’ types (number, string, Boolean, …), their grammatical function (e.g., argument in a call, operand in an expression, value assigned, …), or the purpose of the code in which they appear (test methods, regular code). Third, we report on another study involving 26 programmers who analyzed about 24,000 literals, to understand which ones they consider magic. Finally, we evaluate the hypotheses defining specific conditions under which literals are acceptable. We show that (1) literals still exist and are relatively frequent (found in close to 50% of the methods considered); (2) they are more frequent in test methods (in 80% of test methods); (3) to a large extent, they were considered acceptable (only 25% considered magic); and (4) the hypotheses concerning acceptable literals are valid to various degrees. We thus pave the way to future research on magic literals, for example, with tools that could help developers deciding if a literal is acceptable.",
+    "keywords": [
+      "software analysis",
+      "software quality",
+      "magic literals"
+    ],
+    "officialUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0950584922000908",
+    "doi": "10.1016/j.infsof.2022.106942",
+    "pdf": {
+      "preprint": "https://hal.inria.fr/hal-03679130v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.inria.fr/hal-03679130v1"
+    }
+  },
+  {
+    "id": "pharo-ai-iwst-2022",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "How Fast is AI in Pharo? Benchmarking Linear Regression",
+    "authors": [
+      "Zaitsev, Oleksandr",
+      "Jordan Montaño, Sebastian",
+      "Ducasse, Stéphane"
+    ],
+    "year": 2022,
+    "month": "August",
+    "event": "International Workshop on Smalltalk Technologies",
+    "publisher": "CEUR-WS",
+    "city": "Novi Sad",
+    "country": "Serbia",
+    "abstract": "As many other modern programming languages, Pharo spreads its applications into computationally demanding fields such as machine learning, big data, cryptocurrency, etc. This raises a need for fast numerical computation libraries. In this work, we propose to speed up the low-level computations by calling the routines from highly optimized external libraries, e.g., LAPACK or BLAS through the foreign function interface (FFI). As a proof of concept, we build a prototype implementation of linear regression based on the DGELSD routine of LAPACK. Using three benchmark datasets of different sizes, we compare the execution time of our algorithm agains pure Pharo implementation and scikit-learn — a popular Python library for machine learning. We show that LAPACK&Pharo is up to 2103 times faster than pure Pharo. We also show that scikit-learn is 8-5 times faster than our prototype, depending on the size of the data. Finally, we demonstrate that pure Pharo is up to 15 times faster than the equivalent implementation in pure Python. Those findings can lay the foundation for the future work in building fast numerical libraries for Pharo and further using them in higher-level libraries such as pharo-ai.",
+    "keywords": [
+      "pharo",
+      "benchmarking",
+      "machine learning",
+      "foreign function interface",
+      "lapack",
+      "linear regression"
+    ],
+    "officialUrl": "https://ceur-ws.org/Vol-3325/",
+    "pdf": {
+      "openAccess": "https://ceur-ws.org/Vol-3325/regular3.pdf",
+      "preprint": "https://hal.science/hal-03768601v2/document"
+    },
+    "archives": {
+      "hal": "https://hal.science/hal-03768601v2"
+    }
+  },
+  {
+    "id": "depminer-icsr-2022",
+    "type": "conference paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "DepMiner: Automatic Recommendation of Transformation Rules for Method Deprecation",
+    "authors": [
+      "Zaitsev, Oleksandr",
+      "Ducasse, Stéphane",
+      "Anquetil, Nicolas",
+      "Thiefaine, Arnaud"
+    ],
+    "year": 2022,
+    "month": "June",
+    "event": "International Conference on Software and System Reuse",
+    "series": "Lecture Notes in Computer Science",
+    "publisher": "Springer",
+    "city": "Montpellier",
+    "country": "France",
+    "pages": "22-37",
+    "isbn": "978-3-031-08128-6",
+    "abstract": "Software applications often depend on external libraries and must be updated when one of those libraries releases a new version. To make this process easier, library developers try to reduce the negative effect of breaking changes by deprecating the API elements before removing them and suggesting replacements to the clients. Modern programming languages and IDEs provide powerful tools for deprecations that can reference the replacement or incorporate the rules written by library developers and use them to automatically update the client code. However, in practice library developers often miss the deprecation opportunities and fail to document the deprecations. In this work, we propose to help library developers support their clients with better deprecations. We rely on the transforming deprecations offered by Pharo and use data mining to detect the missing deprecation opportunities and generate the transformation rules. We implemented our approach for Pharo in a prototype tool called DepMiner. We have applied our tool to five open-source projects and proposed the generated deprecations to core developers of those projects. 63 recommended deprecations were accepted as pull requests.",
+    "keywords": [
+      "deprecation",
+      "automatic rewriting",
+      "program transformation",
+      "refactoring",
+      "data mining",
+      "pharo"
+    ],
+    "officialUrl": "https://link.springer.com/chapter/10.1007/978-3-031-08129-3_2",
+    "doi": "10.1007/978-3-031-08129-3_2",
+    "pdf": {
+      "preprint": "https://hal.inria.fr/hal-03647706v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.inria.fr/hal-03647706v1"
+    }
+  },
+  {
+    "id": "method-names-quatic-2020",
+    "type": "conference paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "Suggesting Descriptive Method Names: An Exploratory Study of Two Machine Learning Approaches",
+    "authors": [
+      "Zaitsev, Oleksandr",
+      "Ducasse, Stéphane",
+      "Bergel, Alexandre",
+      "Eveillard, Mathieu"
+    ],
+    "year": 2020,
+    "month": "September",
+    "event": "International Conference on the Quality of Information and Communications Technology",
+    "series": "Communications in Computer and Information Science",
+    "publisher": "Springer",
+    "city": "Faro",
+    "country": "Portugal",
+    "pages": "93-106",
+    "isbn": "978-3-030-58792-5",
+    "abstract": "Programming is a form of communication between the person who is writing code and the one reading it. Nevertheless, very often developers neglect readability, and even well-written code becomes less understandable as software evolves. Together with the growing complexity of software systems, this creates an increasing need for automated tools for improving the readability of source code. In this work, we focus on method names and study how a descriptive name can be automatically generated from a method’s body. We experiment with two approaches from the field of text summarization: One based on TF-IDF and the other on deep recurrent neural network. We collect a dataset of methods from 50 real world projects. We evaluate our approaches by comparing the generated names to the actual ones and report the result using Precision and Recall metrics. For TF-IDF, we get results as good as 28% precision and 45% recall; and for deep neural network, 46% precision and 32% recall.",
+    "keywords": [
+      "software evolution",
+      "machine learning",
+      "method names"
+    ],
+    "officialUrl": "https://link.springer.com/chapter/10.1007/978-3-030-58793-2_8",
+    "doi": "10.1007/978-3-030-58793-2_8",
+    "pdf": {
+      "preprint": "https://hal.inria.fr/hal-02962334v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.inria.fr/hal-02962334v1"
+    }
+  },
+  {
+    "id": "characterizing-pharo-code-2020",
+    "type": "technical report",
+    "peerReviewed": false,
+    "featured": false,
+    "title": "Characterizing Pharo Code: A Technical Report",
+    "authors": [
+      "Zaitsev, Oleksandr",
+      "Ducasse, Stéphane",
+      "Anquetil, Nicolas"
+    ],
+    "year": 2020,
+    "month": "January",
+    "abstract": "Pharo (https://pharo.org/) is a modern dynamically-typed reflective pure object-oriented language. It is inspired from Smalltalk. Its unconventional syntax mimics natural language: arguments are not grouped around parentheses at the end but within the message, making expressions looks like sentences. In addition, all control flow operations are expressed as messages and the programmer can freely define new ones and as such define Domain Specific Languages for his task. In this technical report we discuss the statistical properties of source code that people write using Pharo programming language. We present the methodology and tooling for analysing source code selected from the projects of Pharo ecosystem. By analysing 50 projects, consisting of 824 packages, 13,935 classes, and 151,717 methods, we answer questions such as \"what is a typical method length?\" or \"what percent of source code are literals?\".",
+    "keywords": [
+      "pharo",
+      "source code analysis",
+      "software corpus mining",
+      "code naturalness"
+    ],
+    "pdf": {
+      "preprint": "https://hal.inria.fr/hal-02440055v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.inria.fr/hal-02440055v1"
+    }
+  },
+  {
+    "id": "magic-literals-iwst-2019",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": false,
+    "title": "Magic Literals in Pharo",
+    "authors": [
+      "Delplanque, Julien",
+      "Ducasse, Stéphane",
+      "Zaitsev, Oleksandr"
+    ],
+    "year": 2019,
+    "month": "August",
+    "event": "International Workshop on Smalltalk Technologies",
+    "city": "Köln",
+    "country": "Germany",
+    "abstract": "Literals are constant values (numbers, strings, etc.) used in the source code. Magic literals are the ones used without a clear explanation of their meaning. Presence of such literals harms source code readability, decreases its modularity, and encourages code duplication. Identifying magic literals is not straightforward. A literal can be considered self-explanatory in one context and magic in another. We need a heuristic to help developers spot magic literals. In this article, we study and characterize the literals in Pharo. We implemented a heuristic to detect magic literals and integrated it as a code critic rule for System Browser and Critics Browser in Pharo 7. We run our heuristic on 112,500 Pharo methods which reported 23,292 magic literals spread across 8,986 methods. We manually validated our approach on a random subset of 100 methods and found that 62% of the reported literals in those methods are indeed magic.",
+    "keywords": [
+      "software analysis",
+      "quality",
+      "idioms",
+      "extensibility"
+    ],
+    "pdf": {
+      "preprint": "https://hal.inria.fr/hal-02266137v1/document"
+    },
+    "archives": {
+      "hal": "https://hal.inria.fr/hal-02266137v1"
+    }
+  },
+  {
+    "id": "master-thesis",
+    "type": "thesis",
+    "thesisType": "master",
+    "institution": "Ukrainian Catholic University",
+    "peerReviewed": false,
+    "featured": false,
+    "title": "Aspects of software naturalness through the generation of identifier names",
+    "authors": [
+      "Zaitsev, Oleksandr"
+    ],
+    "year": 2019,
+    "abstract": "Modern-day programming can be viewed as a form of communication between the person who is writing code and the one reading it. Nevertheless, very often developers neglect readability of software, and even well-written code becomes less comprehensive through the course of software evolution. In this work, we study how naturalness of source code written in Pharo allows us to train machine learning models that extract semantic information from method’s body and map it to a short descriptive name. We collect a dataset of methods from 10 biggest projects written in Pharo and build an attention-based sequence to sequence network that generates method names by translating source code into a couple of English words. We evaluate our model on an independent test set and report the precision of over 50%. To our knowledge, this is the first application of machine learning and natural language processing to the source code of Pharo.",
+    "keywords": [
+      "software naturalness",
+      "identifier naming",
+      "pharo",
+      "machine learning"
+    ],
+    "officialUrl": "https://er.ucu.edu.ua/items/f313b1b6-7a95-49f8-81c4-1eed951a7096",
+    "pdf": {
+      "openAccess": "https://er.ucu.edu.ua/server/api/core/bitstreams/c1a92eaa-d35f-4c8d-b28a-24597ffc79fd/content"
+    }
+  },
+  {
+    "id": "dataframe-iwst-2017",
+    "type": "workshop paper",
+    "peerReviewed": true,
+    "featured": true,
+    "title": "Towards Exploratory Data Analysis for Pharo",
+    "authors": [
+      "Zaitsev, Oleksandr"
+    ],
+    "year": 2017,
+    "month": "August",
+    "event": "International Workshop on Smalltalk Technologies",
+    "publisher": "ACM",
+    "city": "Maribor",
+    "country": "Slovenia",
+    "abstract": "In this paper we introduce the DataFrame and DataSeries collections designed for working with structured data in Pharo. These data structures enable exploratory data analysis workflows similar to those available in other ecosystems such as Python and R.",
+    "keywords": [
+      "pharo",
+      "dataframe",
+      "data analysis",
+      "exploratory data analysis"
+    ],
+    "officialUrl": "https://dl.acm.org/doi/10.1145/3139903.3139918",
+    "doi": "10.1145/3139903.3139918",
+    "pdf": {
+      "openAccess": "https://dl.acm.org/doi/epdf/10.1145/3139903.3139918"
     }
   }
 ]
