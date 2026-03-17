@@ -2,9 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import publications from '../../data/publications.json';
 import {
+  formatAuthorsFull,
+  formatBibtex,
+  getPublicationMetaLine,
   getPublicationPdfLink,
-  getPublicationSecondaryLinks,
-  formatBibtex
+  getPublicationSecondaryLinks
 } from '../../utils/publications.js';
 
 export async function getStaticPaths() {
@@ -18,13 +20,8 @@ const { item } = Astro.props;
 const pdfLink = getPublicationPdfLink(item);
 const secondaryLinks = getPublicationSecondaryLinks(item);
 const bibtex = formatBibtex(item);
-
-const metadataParts = [
-  String(item.year),
-  item.type,
-  item.venue,
-  item.publisher
-].filter(Boolean);
+const metaLine = getPublicationMetaLine(item);
+const fullAuthors = formatAuthorsFull(item.authors);
 ---
 
 <BaseLayout title={item.title} description={item.abstract}>
@@ -32,7 +29,7 @@ const metadataParts = [
     <header class="page-header publication-header">
       <p class="section-topline">Publication</p>
       <h1>{item.title}</h1>
-      <p class="page-intro publication-authors-full">{item.authors.join(', ')}</p>
+      <p class="page-intro publication-authors-full">{fullAuthors.join(', ')}</p>
     </header>
 
     {pdfLink && (
@@ -66,13 +63,13 @@ const metadataParts = [
               stroke-linecap="round"
             />
           </svg>
-          <span>{pdfLink.label}</span>
+          <span>{pdfLink.label === 'PDF' ? 'Download PDF' : pdfLink.label}</span>
         </a>
       </section>
     )}
 
     <section class="section-block publication-meta-inline">
-      <p>{metadataParts.join(' · ')}</p>
+      <p>{metaLine}</p>
     </section>
 
     <section class="section-block">

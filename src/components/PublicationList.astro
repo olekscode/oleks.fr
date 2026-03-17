@@ -1,21 +1,24 @@
 ---
 import LinkedRow from './LinkedRow.astro';
-import { shortenAuthors, getPublicationPdfLink } from '../utils/publications.js';
+import {
+  getPublicationListDescription,
+  getPublicationPdfLink,
+  getPublicationMetaShort
+} from '../utils/publications.js';
 
 const { items = [] } = Astro.props;
 ---
 
 <div class="publication-list publication-list-compact">
   {items.map((item) => {
-    const authors = shortenAuthors(item.authors).join(', ');
     const pdfLink = getPublicationPdfLink(item);
 
     return (
       <LinkedRow
-        href={`/publications/${item.id}/`}
+        href={`publications/${item.id}/`}
         title={item.title}
-        description={`${authors} — ${item.venue}`}
-        meta={`${item.year} · ${item.type}`}
+        description={getPublicationListDescription(item)}
+        meta={getPublicationMetaShort(item)}
         links={pdfLink ? [{ ...pdfLink, external: true }] : []}
         ariaLabel={`Open publication page for ${item.title}`}
       />

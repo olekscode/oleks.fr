@@ -2,7 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LinkedRow from '../../components/LinkedRow.astro';
 import publications from '../../data/publications.json';
-import { shortenAuthors, getPublicationPdfLink } from '../../utils/publications.js';
+import {
+  getPublicationListDescription,
+  getPublicationPdfLink,
+  getPublicationMetaShort,
+  getPublicationPrimaryContainer
+} from '../../utils/publications.js';
 
 const items = [...publications].sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 const years = [...new Set(items.map((item) => item.year))].sort((a, b) => b - a);
@@ -35,7 +40,7 @@ const types = [...new Set(items.map((item) => item.type))].sort();
 
       <div class="control-group control-group-wide">
         <label for="publication-search">Search</label>
-        <input id="publication-search" type="search" placeholder="Title, venue, author" />
+        <input id="publication-search" type="search" placeholder="Title, journal, event, author" />
       </div>
 
       <div class="control-group">
@@ -50,22 +55,22 @@ const types = [...new Set(items.map((item) => item.type))].sort();
 
     <div id="publication-results" class="publication-list publication-list-compact publication-results">
       {items.map((item) => {
-        const authors = shortenAuthors(item.authors).join(', ');
         const pdfLink = getPublicationPdfLink(item);
+        const container = getPublicationPrimaryContainer(item);
 
         return (
           <LinkedRow
             href={`/publications/${item.id}/`}
             title={item.title}
-            description={`${authors} — ${item.venue}`}
-            meta={`${item.year} · ${item.type}`}
+            description={getPublicationListDescription(item)}
+            meta={getPublicationMetaShort(item)}
             links={pdfLink ? [{ ...pdfLink, external: true }] : []}
             ariaLabel={`Open publication page for ${item.title}`}
             dataAttributes={{
               'data-type': item.type,
               'data-year': String(item.year),
               'data-title': item.title.toLowerCase(),
-              'data-venue': item.venue.toLowerCase(),
+              'data-venue': container.toLowerCase(),
               'data-authors': item.authors.join(' ').toLowerCase()
             }}
           />
@@ -77,5 +82,4 @@ const types = [...new Set(items.map((item) => item.type))].sort();
   </article>
 
   <script is:inline src="/js/publications-filter.js" defer></script>
-  <script is:inline src="/js/row-links.js" defer></script>
 </BaseLayout>
